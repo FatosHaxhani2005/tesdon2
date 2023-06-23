@@ -13,24 +13,14 @@
             checkboxArray.forEach(function(checkbox) {
                 checkboxesContainer.appendChild(checkbox);
             });
-        } window.onload = function() {
-var form = document.getElementByld('checkboxes-container');
-var shuffleButton = document.getEkenebtByld('shuffleButton');
+        }
 
-shuffleButton.addEventListener('click', shuffleCheckboxes);
+        window.onload = function() {
+            var form = document.getElementById('checkboxes-container');
+            var shuffleButton = document.getElementById('shuffleButton');
 
-checkbox inputs
-function shuffleCheckboxes() {
-var checkboxes = Array.from(form.getElementsByTagName('input'));
-var checkboxContainer = checkboxes (0).parentNode;
-
-{ return 0.5 - Math.random(); });
-checkboxContainer.innerHTML =";
-checkboxes.forEach(function(checkbox) {
-checkboxContainer.appendChild(checkbox);
-});
-}
-};
+            shuffleButton.addEventListener('click', shuffleValues);
+        };
 
         function changeValues() {
             var checkboxes = document.getElementsByName('checkbox');
@@ -61,7 +51,7 @@ checkboxContainer.appendChild(checkbox);
             <input type="checkbox" name="checkbox" value="Employment"> Employment<br>
             <input type="checkbox" name="checkbox" value="Career"> Career<br><br>
         </div>
-        <button type="button" onclick="shuffleValues()">Shuffle Values</button>
+        <button type="button" id="shuffleButton" onclick="shuffleValues()">Shuffle Values</button>
         <button type="button" onclick="changeValues()">Change Values</button>
         <button type="button" onclick="showSelectedValues()">Show Selected Values</button>
         <div id="result"></div>
